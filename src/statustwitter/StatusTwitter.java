@@ -25,10 +25,10 @@ public class StatusTwitter {
 
         Query query = new Query("#Cangas");
 
-        QueryResult result = mitwitter.search(query);
+        QueryResult resultado = mitwitter.search(query);
 
-        for (Status status : result.getTweets()) {
-            System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+        for (Status estado : resultado.getTweets()) {
+            System.out.println("@" + estado.getUser().getScreenName() + ":" + estado.getText());
         }
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -37,7 +37,7 @@ public class StatusTwitter {
                 .setOAuthAccessToken("867802357-6hZ73Bu9QVD8ExLFmeJkarBsmOXXNgBMZXxp3sH1")
                 .setOAuthAccessTokenSecret("R9rGWgmyoUW5vz0wHypXNlgZn7F7ArU7mGf3Ibies6h6d");
         TwitterFactory tf = new TwitterFactory(cb.build());
-        Twitter twitter = tf.getInstance();
+        Twitter twitter1 = tf.getInstance();
 
     }
 }

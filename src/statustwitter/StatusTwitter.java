@@ -10,6 +10,7 @@ import twitter4j.conf.ConfigurationBuilder;
 
 /**
  * Clase para recobrar los twitts del morrazo
+ *
  * @author damian
  */
 public class StatusTwitter {
@@ -19,24 +20,24 @@ public class StatusTwitter {
      * @throws twitter4j.TwitterException
      */
     public static void main(String[] args) throws TwitterException {
-     
+
         Twitter mitwitter = new TwitterFactory().getInstance();
- 
+
         Query query = new Query("#Cangas");
-        
+
         QueryResult result = mitwitter.search(query);
-        
+
         for (Status status : result.getTweets()) {
             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
         }
         ConfigurationBuilder cb = new ConfigurationBuilder();
-cb.setDebugEnabled(true)
-  .setOAuthConsumerKey("*********************")
-  .setOAuthConsumerSecret("******************************************")
-  .setOAuthAccessToken("**************************************************")
-  .setOAuthAccessTokenSecret("******************************************");
-TwitterFactory tf = new TwitterFactory(cb.build());
-Twitter twitter = tf.getInstance();
+        cb.setDebugEnabled(true)
+                .setOAuthConsumerKey("sfykEWIIWMM60T0apJFNGmc9n")
+                .setOAuthConsumerSecret("DnFd8UbiNXcxoHhei4kQ4wMsctTHjI8MkW0fqVjCdSfdWaSBqW")
+                .setOAuthAccessToken("867802357-6hZ73Bu9QVD8ExLFmeJkarBsmOXXNgBMZXxp3sH1")
+                .setOAuthAccessTokenSecret("R9rGWgmyoUW5vz0wHypXNlgZn7F7ArU7mGf3Ibies6h6d");
+        TwitterFactory tf = new TwitterFactory(cb.build());
+        Twitter twitter = tf.getInstance();
 
     }
 }

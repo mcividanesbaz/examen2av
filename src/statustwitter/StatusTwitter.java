@@ -37,7 +37,7 @@ public class StatusTwitter {
                 .setOAuthAccessToken("867802357-6hZ73Bu9QVD8ExLFmeJkarBsmOXXNgBMZXxp3sH1")
                 .setOAuthAccessTokenSecret("R9rGWgmyoUW5vz0wHypXNlgZn7F7ArU7mGf3Ibies6h6d");
         TwitterFactory tf = new TwitterFactory(cb.build());
-        Twitter twitter1 = tf.getInstance();
+        Twitter twitterConflicto = tf.getInstance();
 
     }
 }
